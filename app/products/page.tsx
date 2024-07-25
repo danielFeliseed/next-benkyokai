@@ -1,14 +1,3 @@
-
-// interface DummyProduct {
-//     id: number;
-//     name: string;
-//     description: string;
-// }
-
-// interface ProductsPageProps {
-//     dummyProducts: DummyProduct[];
-// }
-
 import Link from "next/link";
 
 export default function ProductsPage() {
@@ -48,3 +37,26 @@ export default function ProductsPage() {
         </>
     )
 }
+
+// Without using fragments. it will take more space in the DOM
+// function MyComponent() {
+//     return (
+//       <div>
+//         <h1>Title</h1>
+//         <p>Description</p>
+//       </div>
+//     );
+//   }
+
+// Using fragments. it will take less space in the DOM
+// function MyComponent() {
+//     return (
+//       <>
+//         <h1>Title</h1>
+//         <p>Description</p>
+//       </>
+//     );
+//   }
+
+// You can also use <React.Fragment> instead of <>.
+// If you try and put two HTML elements next to each other without a parent element, you will get an error.

@@ -1,5 +1,11 @@
 import Link from 'next/link'
-export default function ProductSideBar({ children }) {
+
+interface children {
+    children: React.ReactNode;
+}
+
+export default function ProductSideBar({ children }: children) {
+
     return (
         <div className="flex">
             <div className="w-1/4 bg-gray-200 p-4">
@@ -9,6 +15,11 @@ export default function ProductSideBar({ children }) {
                             <Link href="/products/1">
                                 Product 1
                             </Link>
+                        </li>
+                        <li className="font-bold border-b border-gray-300 pb-2 p-2 rounded-lg hover:bg-black hover:text-white">
+                            <a href="/products/1">
+                                Product 1 (a tag)
+                            </a>
                         </li>
                         <li className="font-bold border-b border-gray-300 pb-2 p-2 rounded-lg hover:bg-black hover:text-white">
 

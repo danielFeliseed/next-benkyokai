@@ -1,13 +1,13 @@
 'use client';
-import { usePathname } from "next/navigation"
+import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
 
 export default function Product() {
-    const pathname = usePathname()
-
+    const params = useParams();
+    console.log(params);
     return (
-        <div>
-            <h1>{pathname}</h1>
+        <div className="flex items-center justify-center min-h-screen">
+            <h1>Product {params.product}</h1>
         </div>
     )
 };
